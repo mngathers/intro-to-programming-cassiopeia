@@ -38,7 +38,23 @@ messageForm.addEventListener("submit", (event) => {
 
     let newMessage = document.createElement("li");
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>wrote: ${message} </span>`;
-    
+
+    /*if (messageList.hasChildNodes(newMessage)) {
+        messageSection.style.visibility = "visible";
+    } else {
+        messageSection.style.visibility = "hidden";
+    };*/
+
+   /*if (messageList.style.display == "none") {
+        messageSection.style.visibility = "hidden";
+    };*/
+
+    /*if (messageList.children.length = 0) {
+        messageSection.style.display = 'none';
+      } else {
+        messageSection.style.visibility = 'hidden';
+      }*/
+
     let removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.setAttribute("type", "button");

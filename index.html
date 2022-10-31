@@ -3,6 +3,11 @@
     <head>
         <title>My new webpage</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <h1>Melise Gathers</h1>
@@ -12,29 +17,29 @@
         </section>
         <section>
             <h2>Experience</h2>
-            <ul>
+            <ul class="experience">
                 <li>G{Code} Alumni</li>
                 <li>plant-based vegan personal project</li>
             </ul>
         </section>
         <section id="skills">
             <h2>Skills</h2>
-            <ul></ul>
+            <ul class="skills"></ul>
         </section>  
         <section>
             <h2>Connect</h2>
-            <p><a href="https://github.com/mngathers"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="32" height="32" alt="GitHub logo"></a></p>
+            <p><a href="https://github.com/mngathers" target="_blank" rel="noopener noreferrer"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-square-512.png" width="32" height="32" alt="GitHub logo"></a></p>
         </section>
         <section>
             <h2>Leave a Message</h2>
             <form name="leave_message">
-                <label for="name">Name</label>
+                <label for="name">Name</label><br>
                 <input type="text" name="name" id="name" required="true"><br>
 
-                <label for="email">Email Address</label>
+                <label for="email">Email Address</label><br>
                 <input type="email" name="email" id="email" required="true"><br>
 
-                <label for="message">Message</label>
+                <label for="message">Message</label><br>
                 <textarea name="message" id="message" required="true"></textarea>
 
                 <button type="submit">Submit</button>
@@ -42,7 +47,7 @@
         </section>
         <section id="messages">
             <h2>Messages</h2>
-            <ul></ul>
+            <ul class="messages"></ul>
         </section>
         <footer></footer>
         <script src="js/index.js"></script>

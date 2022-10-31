@@ -1,0 +1,128 @@
+@media screen and (max-width: 600px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+* {
+    margin: 0.1em;
+}
+
+body {
+    background-color: rgb(170, 147, 117);
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+section {
+    margin-left: 0.5em;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 700;
+    font-style: italic;
+    color: black;
+    padding-top: 20px;
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: rgb(162, 57, 19);
+    text-align: left;
+}
+
+p {
+    font-size: 28px;
+}
+
+.experience {
+    display: block;
+    background: rgb(181, 117, 22);
+    max-width: 30%;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    text-align: left;
+}
+
+#skills {
+    max-width: 30%;
+    display: block;
+    background: rgba(29, 63, 31, 0.736);
+    max-width: 30%;
+    padding: 20px;
+    font-size: 28;
+    border-radius: 10px;
+}
+
+.skills {
+    display: block;
+    max-width: 30%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 30px;
+    text-align: left;
+}
+
+#skills:hover {
+    background-color: rgb(58, 54, 54);
+    color: white;
+}
+
+.experience:hover {
+    color: white;
+}
+
+li:hover {
+    background-color: black;
+}
+
+form {
+    max-width: 30%;
+    border-style: groove;
+    border-radius: 10px;
+    background: rgb(26, 25, 25);
+    padding: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: gray;
+}
+
+input {
+    padding-top: 10px;
+}
+
+#message {
+    padding-top: 30px;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    color: peru;
+    text-align: center;
+}
+
+.messages {
+    border-radius: 0%;
+    font-size: 24px;
+    color: gainsboro;
+    background: gray;
+}
+
+footer {
+    background-color: rgb(58, 54, 54);
+    padding-top: 80px;
+    color: white;
+    margin: 0em;
+    padding-left: 10px;
+}
