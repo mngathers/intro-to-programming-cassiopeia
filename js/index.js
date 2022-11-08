@@ -4,7 +4,7 @@ let thisYear = today.getFullYear();
 let footer = document.querySelector("footer");
 
 let copyright = document.createElement("p");
-    copyright.innerHTML = `Melise Gathers ${thisYear}`;
+    copyright.innerHTML = `&copy ${thisYear} Melise Gathers`;
 
 footer.appendChild(copyright);
 
@@ -17,6 +17,11 @@ for (i in skills) {
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
+let messageSection = document.getElementById("messages");
+let messageList = messageSection.querySelector("ul");
+let newMessage = document.createElement("li");
+    messageSection.style.display = "none";
 
 const messageForm = document.querySelector('[name="leave_message"]');
 messageForm.addEventListener("submit", (event) => {
@@ -36,40 +41,30 @@ messageForm.addEventListener("submit", (event) => {
     let messageSection = document.getElementById("messages");
     let messageList = messageSection.querySelector("ul");
 
+    if (messageList.style.visibility = "hidden") {
+        messageSection.style.display = "block";
+        messageList.style.visibility = "visible";
+      }
+
     let newMessage = document.createElement("li");
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>wrote: ${message} </span>`;
-
-    /*if (messageList.hasChildNodes(newMessage)) {
-        messageSection.style.visibility = "visible";
-    } else {
-        messageSection.style.visibility = "hidden";
-    };*/
-
-   /*if (messageList.style.display == "none") {
-        messageSection.style.visibility = "hidden";
-    };*/
-
-    /*if (messageList.children.length = 0) {
-        messageSection.style.display = 'none';
-      } else {
-        messageSection.style.visibility = 'hidden';
-      }*/
 
     let removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.setAttribute("type", "button");
     removeButton.addEventListener("click", (event) => {
         let entry = removeButton.parentNode;
+
+        if (messageList.children.length <= 1) {
+            messageSection.style.visibility = "hidden";
+          }
+
         entry.remove();
+            
     });
 
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
-
-    // HIDE MESSAGE SECTION - when list is empty (not working)
-    /*if (messageList.style.display == "none") {
-        messageSection.style.visibility = "hidden";
-    };*/
 
     messageForm.reset();
 

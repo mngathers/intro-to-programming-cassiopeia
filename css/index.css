@@ -2,6 +2,7 @@
     form {
         display: flex;
         flex-direction: column;
+        min-width: 100%;
     }
 }
 
@@ -9,10 +10,34 @@
     margin: 0.1em;
 }
 
+.container {
+    margin: 4em;
+}
+
 body {
-    background-color: rgb(170, 147, 117);
-    color: black;
+    background-color: rgb(130, 130, 60);
+    color: wheat;
     font-family: 'Cormorant Garamond', serif;
+}
+
+#nav {
+    list-style-type: none;
+    position: fixed;
+    right: 5px;
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    background: wheat;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 section {
@@ -24,8 +49,8 @@ h1 {
     font-size: 52px;
     font-weight: 700;
     font-style: italic;
-    color: black;
-    padding-top: 20px;
+    color:darkslategray;
+    padding-top: 80px;
     margin-bottom: 80px;
 }
 
@@ -36,45 +61,55 @@ h2 {
     text-align: left;
 }
 
-p {
-    font-size: 28px;
+#bio {
+    font-size: 32px;
+    font-weight: 800;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 80px;
 }
 
 .experience {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: rgb(181, 117, 22);
     max-width: 30%;
     padding: 20px;
     font-size: 20px;
     border-radius: 30px;
     text-align: left;
+    list-style-type: none;
+}
+
+.experience:hover {
+    color: white;
 }
 
 #skills {
     max-width: 30%;
-    display: block;
-    background: rgba(29, 63, 31, 0.736);
-    max-width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(58, 54, 54);
+    max-width: 60%;
     padding: 20px;
+    padding-top: 40px;
     font-size: 28;
     border-radius: 10px;
+    list-style-type: none;
+    text-align: right;
 }
 
 .skills {
-    display: block;
     max-width: 30%;
     padding: 10px;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 30px;
     text-align: left;
 }
 
 #skills:hover {
-    background-color: rgb(58, 54, 54);
-    color: white;
-}
-
-.experience:hover {
     color: white;
 }
 
@@ -83,16 +118,18 @@ li:hover {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
     max-width: 30%;
     border-style: groove;
     border-radius: 10px;
-    background: rgb(26, 25, 25);
+    background: rgb(68, 102, 55);
     padding: 20px;
 }
 
 label {
     font-size: 18px;
-    color: gray;
+    color: white;
 }
 
 input {
@@ -108,8 +145,11 @@ button {
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 10px;
-    color: peru;
+    color: white;
+    background-color: rgb(187, 88, 21);
     text-align: center;
+    max-width: 5em;
+    margin-top: 20px;;
 }
 
 .messages {
@@ -125,4 +165,6 @@ footer {
     color: white;
     margin: 0em;
     padding-left: 10px;
+    text-align: center;
+    width: 100%;
 }
