@@ -8,6 +8,9 @@ let copyright = document.createElement("p");
 
 footer.appendChild(copyright);
 
+let connect = document.getElementById("connect");
+    footer.appendChild(connect);
+
 let skills = ["HTML", "CSS", "JavaScript"];
 let skillsSection = document.getElementById("skills");
 let skillsList = document.querySelector("#skills");
@@ -56,7 +59,7 @@ messageForm.addEventListener("submit", (event) => {
         let entry = removeButton.parentNode;
 
         if (messageList.children.length <= 1) {
-            messageSection.style.visibility = "hidden";
+            messageSection.style.display = "none";
           }
 
         entry.remove();
@@ -67,5 +70,24 @@ messageForm.addEventListener("submit", (event) => {
     messageList.appendChild(newMessage);
 
     messageForm.reset();
+
+});
+
+let githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/mngathers/repos");
+githubRequest.send();
+
+githubRequest.addEventListener("load", (event) => {
+    let repositories = JSON.parse(githubRequest.response);
+    console.log(repositories);
+
+    let projectSection = document.getElementById("projects");
+    let projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++ ) {
+        let project = document.createElement("li");
+        project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
+        projectList.appendChild(project);   
+    };
 
 });

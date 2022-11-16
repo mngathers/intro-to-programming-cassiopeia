@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
+        <div class="element">
         <nav>
             <ul id="nav">
                 <li><a href="#bio">About</a></li>
@@ -17,6 +18,12 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#connect">Connect</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+             </div>
+        </div>     
         </nav>
         <div class="container">
         <h1>Melise Gathers</h1>
@@ -31,15 +38,21 @@
                 <li>plant-based vegan personal project</li>
             </ul>
         </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills"></ul>
-        </section>  
+        <div class="facts">
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul class="skills"></ul>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul></ul>
+            </section>
+        </div>
         <section id="connect">
             <h2>Connect</h2>
             <p><a href="https://github.com/mngathers" target="_blank" rel="noopener noreferrer"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-square-512.png" width="32" height="32" alt="GitHub logo"></a></p>
         </section>
-        <section>
+        <section id="form">
             <h2>Leave a Message</h2>
             <form name="leave_message">
                 <label for="name">Name</label><br>
@@ -61,5 +74,6 @@
         </div>
         <footer></footer>
         <script src="js/index.js"></script>
+        </div>
     </body>
 </html>
