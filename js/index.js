@@ -73,21 +73,18 @@ messageForm.addEventListener("submit", (event) => {
 
 });
 
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/mngathers/repos");
-githubRequest.send();
+fetch("https://api.github.com/users/mngathers/repos")
+    .then(response => response.json())
+    .then(repositories => {
+        console.log(repositories);
 
-githubRequest.addEventListener("load", (event) => {
-    let repositories = JSON.parse(githubRequest.response);
-    console.log(repositories);
+        let projectSection = document.getElementById("projects");
+        let projectList = projectSection.querySelector("ul");
 
-    let projectSection = document.getElementById("projects");
-    let projectList = projectSection.querySelector("ul");
-
-    for (let i = 0; i < repositories.length; i++ ) {
-        let project = document.createElement("li");
-        project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
-        projectList.appendChild(project);   
-    };
-
-});
+        for (let i = 0; i < repositories.length; i++ ) {
+            let project = document.createElement("li");
+            project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => console.error(error))
