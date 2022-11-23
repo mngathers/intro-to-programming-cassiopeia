@@ -93,6 +93,7 @@ h2 {
     background-color: #3f3b6cc9;
     max-width: 20%;
     height: auto;
+    margin-left: auto;
     padding: 40px 20px 80px;
     font-size: 28;
     border-radius: 10px;
@@ -105,7 +106,7 @@ h2 {
     #skills {
         display: flex;
         flex-flow: row wrap;
-        margin: 40px 0px;
+        margin: 40px 5px;
         max-width:unset;
         justify-content: space-around;
         align-items: center;
@@ -117,6 +118,11 @@ h2 {
     padding: 10px;
     font-size: 24px;
     border-radius: 30px;
+}
+
+#skills > li {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 #skills:hover {
@@ -147,6 +153,7 @@ li:hover {
     background-color: #164d72;
     border-radius: 10px;
     width: fit-content;
+    margin-right: auto;
     
 }
 
@@ -160,6 +167,16 @@ li:hover {
     padding: 20px;
 }
 
+#writing {
+    display: flex;
+    flex-direction: column;
+    background-color: #164d72;
+    padding: 40px 20px 80px;
+    border-radius: 10px;
+    width: fit-content;
+    margin-top: 5em;
+}
+
 #form {
     padding-top: 80px;
     
@@ -168,7 +185,7 @@ li:hover {
 form {
     display: flex;
     flex-direction: column;
-    max-width: 30%;
+    max-width: 35%;
     border-style: groove;
     border-radius: 10px;
     background: linear-gradient(to right, #5e549b 0,#164d72 100%);
