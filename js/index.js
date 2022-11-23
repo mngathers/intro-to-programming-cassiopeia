@@ -11,7 +11,7 @@ footer.appendChild(copyright);
 let connect = document.getElementById("connect");
     footer.appendChild(connect);
 
-let skills = ["HTML", "CSS", "JavaScript"];
+let skills = ["HTML", "CSS", "JavaScript", "Github", "Git", "VSCode", "Drupal"];
 let skillsSection = document.getElementById("skills");
 let skillsList = document.querySelector("#skills");
 
